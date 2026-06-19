@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · aoke 产品说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafbfc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      line-height: 1.6;
+      color: #1e2a3a;
+      padding: 2rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 标题层级：大、中、小 + 正文体 */
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: #0b1829;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin: 2.25rem 0 0.75rem 0;
+      letter-spacing: -0.01em;
+      color: #152230;
+      border-bottom: 1px solid #e5e9ef;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin: 1.5rem 0 0.4rem 0;
+      color: #1e2f42;
+    }
+
+    p {
+      margin-bottom: 1.1rem;
+      font-size: 0.97rem;
+      color: #2c3d52;
+    }
+
+    /* 辅助文本 */
+    .meta-note {
+      font-size: 0.85rem;
+      color: #6b7a8e;
+      margin-top: -0.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* 卡片 / 要点块 */
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    .card-point {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.1rem 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 20, 40, 0.04);
+      border: 1px solid #edf0f5;
+    }
+
+    .card-point strong {
+      display: block;
+      font-weight: 550;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      color: #10304f;
+    }
+
+    .card-point span {
+      font-size: 0.9rem;
+      color: #3e536b;
+    }
+
+    /* 使用建议列表（简洁表格式） */
+    .usage-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0 1.5rem 0;
+    }
+
+    .usage-list li {
+      display: flex;
+      gap: 0.7rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #eef2f7;
+      font-size: 0.93rem;
+      color: #23364b;
+    }
+
+    .usage-list li:last-child {
+      border-bottom: none;
+    }
+
+    .usage-list .label {
+      min-width: 5rem;
+      font-weight: 500;
+      color: #1b334b;
+    }
+
+    /* 提示框 / 访问提醒 (可信但克制) */
+    .reminder-box {
+      background: #f2f5fa;
+      border-left: 4px solid #8898aa;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.8rem 0 1rem 0;
+      font-size: 0.92rem;
+      color: #20364b;
+    }
+
+    .reminder-box strong {
+      font-weight: 550;
+      color: #0b253e;
+    }
+
+    /* FAQ 摘要 — 紧凑 */
+    .faq-mini {
+      margin: 1.5rem 0;
+    }
+
+    .faq-item {
+      margin: 0.6rem 0;
+      border-bottom: 1px solid #edf0f4;
+      padding-bottom: 0.6rem;
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      font-size: 0.94rem;
+      color: #1a314b;
+    }
+
+    .faq-item .a {
+      font-size: 0.9rem;
+      color: #3a4e66;
+      margin-top: 0.15rem;
+    }
+
+    /* 链接样式 */
+    a {
+      color: #1d4d7a;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(28, 76, 124, 0.25);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #082f52;
+      border-bottom-color: #082f52;
+    }
+
+    /* 分隔 & 脚注 */
+    .footnote {
+      margin-top: 2.8rem;
+      font-size: 0.8rem;
+      color: #7b8b9e;
+      border-top: 1px solid #e3e8ef;
+      padding-top: 1.5rem;
+      text-align: left;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+      .usage-list li {
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+      .usage-list .label {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Hero / 摘要 -->
+  <h1>aoke · 产品说明<br>从简明指南切入</h1>
+  <p>本页围绕 <a href="https://website-main-aoke.com">aoke</a> 的核心定位，以所见即所得的方式概括其设计意图、适用场景以及使用时需要注意的事项。不渲染冗余，只陈述事实与合理建议。</p>
+
+  <!-- 亮点（用卡片网格） -->
+  <h2>主要特点</h2>
+  <div class="highlight-grid">
+    <div class="card-point">
+      <strong>定向明确</strong>
+      <span>面向有具体信息需求的用户，减少无关跳转与干扰，呈现结构清晰的路径。</span>
+    </div>
+    <div class="card-point">
+      <strong>信息密度适中</strong>
+      <span>不堆砌术语，每个段落承载一个有效观点，便于快速理解与复用。</span>
+    </div>
+    <div class="card-point">
+      <strong>访问意图中立</strong>
+      <span>不采用紧迫性或诱导性语言，让用户基于自身判断决定是否进一步了解。</span>
+    </div>
+    <div class="card-point">
+      <strong>底层一致性</strong>
+      <span>无论从哪个入口接触，内容逻辑与语气保持稳定，降低认知负担。</span>
+    </div>
+  </div>
+
+  <p>上述特点不是空泛标签，而是在内容组织、链接放置、措辞选择中实际贯彻的原则。如果你希望评估 <a href="https://website-main-aoke.com">aoke</a> 是否符合自己的需求，下面几项使用建议可供参考。</p>
+
+  <!-- 使用建议 (用表格风格列表) -->
+  <h2>使用建议</h2>
+  <ul class="usage-list">
+    <li><span class="label">首次接触</span> 先浏览摘要与特点部分，快速判断关联性。</li>
+    <li><span class="label">信息核查</span> 如需要验证具体细节，请直接参考相应章节，避免依赖二手概括。</li>
+    <li><span class="label">链接使用</span> 页面内的<a href="https://website-main-aoke.com">aoke</a>链接指向统一入口，可反复使用，无需重新搜索。</li>
+    <li><span class="label">重复访问</span> 场景变化后再次查阅，可能会发现之前忽略的细节。</li>
+  </ul>
+
+  <!-- 场景说明 (穿插在行文中) -->
+  <h2>适用场景举例</h2>
+  <p>当你想快速了解一个工具或服务是否值得深入，却又反感营销腔调时，<a href="https://website-main-aoke.com">aoke</a> 提供的说明风格或许正合适。它适合个人评估、团队内部参考，也适合作为文档的前置摘要。</p>
+  <p>不适合的情况：如果需要情绪化渲染或带有强烈行动指引的页面，本说明的克制手法可能显得过于平淡。请按自身偏好选择。</p>
+
+  <!-- 访问提醒 (可信但克制) -->
+  <h2>访问说明</h2>
+  <div class="reminder-box">
+    <strong>理性访问提醒</strong><br>
+    本页面不收集任何数据，也不推荐“立即行动”。链接指向 <a href="https://website-main-aoke.com">aoke</a> 在公网上的信息聚合，请根据自身网络环境与需求决定是否继续。所有表述均基于可验证的功能特征，无夸大或承诺。
+  </div>
+
+  <!-- FAQ 摘要（精简，不占太多空间） -->
+  <h2>常见疑问摘要</h2>
+  <div class="faq-mini">
+    <div class="faq-item">
+      <div class="q">aoke 是否需要注册？</div>
+      <div class="a">根据当前公开说明，访问主要页面无需强制注册；具体功能可能存在差异，请以实际页面提示为准。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">内容是否保持更新？</div>
+      <div class="a">本介绍页面与 <a href="https://website-main-aoke.com">aoke</a> 主站保持独立，主站内容由相应团队维护，建议定期查看。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">链接是否安全？</div>
+      <div class="a">链接使用标准 https 协议。用户在点击前可自行核对域名。本页不附加追踪参数。</div>
+    </div>
+  </div>
+
+  <!-- 结尾 -->
+  <div class="footnote">
+    <p>本文档仅为产品说明摘要，不构成任何形式的合同、担保或承诺。所有信息以 <a href="https://website-main-aoke.com">aoke</a> 实际呈现为准。如有具体问题，请通过公开渠道核实。</p>
+  </div>
+
+</div>
+</body>
+</html>

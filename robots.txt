@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://peatchoin45.github.io/website-main-aoke-com/sitemap.xml
